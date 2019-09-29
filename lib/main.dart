@@ -5,6 +5,7 @@ import 'package:flutter_app_test/test3.dart';
 import 'package:flutter_app_test/test4.dart';
 import 'package:flutter_app_test/test6.dart';
 import 'package:flutter_app_test/test7.dart';
+import 'package:flutter_app_test/test8.dart';
 
 import 'animation.dart';
 import 'bug_1.dart';
@@ -18,7 +19,7 @@ class LogoApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Color(0xddffffff),
-        body: CustomPaint(painter: MyCustomPainter()),
+        body: MyHomePage8(title: "home page"),
       ),
     );
   }

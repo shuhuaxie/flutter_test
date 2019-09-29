@@ -555,6 +555,7 @@ class _RawMaterialButtonState extends State<RawMaterialButton> {
                 ),
               ),
             ),
+//              child: widget.child
           ),
         ),
       ),

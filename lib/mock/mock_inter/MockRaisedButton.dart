@@ -1,0 +1,71 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart'
+    hide RaisedButton, ButtonTextTheme, MaterialTapTargetSize;
+import 'package:flutter_app_test/mock/material/button_theme.dart';
+import 'package:flutter_app_test/mock/material/raised_button.dart';
+import 'package:flutter_app_test/mock/material/theme_data.dart';
+
+class MockRaisedButton extends RaisedButton {
+  const MockRaisedButton({
+    Key key,
+    @required VoidCallback onPressed,
+    ValueChanged<bool> onHighlightChanged,
+    ButtonTextTheme textTheme,
+    Color textColor,
+    Color disabledTextColor,
+    Color color,
+    Color disabledColor,
+    Color focusColor,
+    Color hoverColor,
+    Color highlightColor,
+    Color splashColor,
+    Brightness colorBrightness,
+    double elevation,
+    double focusElevation,
+    double hoverElevation,
+    double highlightElevation,
+    double disabledElevation,
+    EdgeInsetsGeometry padding,
+    ShapeBorder shape,
+    Clip clipBehavior,
+    FocusNode focusNode,
+    bool autofocus = false,
+    MaterialTapTargetSize materialTapTargetSize,
+    Duration animationDuration,
+    Widget child,
+  })  : assert(autofocus != null),
+        assert(elevation == null || elevation >= 0.0),
+        assert(focusElevation == null || focusElevation >= 0.0),
+        assert(hoverElevation == null || hoverElevation >= 0.0),
+        assert(highlightElevation == null || highlightElevation >= 0.0),
+        assert(disabledElevation == null || disabledElevation >= 0.0),
+        super(
+          key: key,
+          onPressed: onPressed,
+          onHighlightChanged: onHighlightChanged,
+          textTheme: textTheme,
+          textColor: textColor,
+          disabledTextColor: disabledTextColor,
+          color: color,
+          disabledColor: disabledColor,
+          focusColor: focusColor,
+          hoverColor: hoverColor,
+          highlightColor: highlightColor,
+          splashColor: splashColor,
+          colorBrightness: colorBrightness,
+          elevation: elevation,
+          focusElevation: focusElevation,
+          hoverElevation: hoverElevation,
+          highlightElevation: highlightElevation,
+          disabledElevation: disabledElevation,
+          padding: padding,
+          shape: shape,
+          clipBehavior: clipBehavior,
+          focusNode: focusNode,
+          autofocus: autofocus,
+          materialTapTargetSize: materialTapTargetSize,
+          animationDuration: animationDuration,
+          child: child,
+        );
+}
