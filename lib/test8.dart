@@ -23,6 +23,7 @@ class _MyHomePageState extends State<MyHomePage8> {
   @override
   Widget build(BuildContext context) {
     var raisedButton = MockRaisedButton(
+        key: Key('check press key'),
         child: Text(_buttonEnabled ? 'Enabled' : 'Disabled'),
         onPressed: _buttonEnabled ? () {} : null);
     return Scaffold(
@@ -35,13 +36,15 @@ class _MyHomePageState extends State<MyHomePage8> {
             ),
             raisedButton,
             RaisedButton(
+                key: Key('normal button 1'),
                 child: Text('Toggle enabled'),
                 onPressed: () =>
                     setState(() => _buttonEnabled = !_buttonEnabled)),
-            RaisedButton(
-                child: Text('check status'),
-                onPressed: () =>
-                    print('xie state of one ' + raisedButton.enabled.toString())),
+//            RaisedButton(
+//                key: Key('normal button 2'),
+//                child: Text('check status'),
+//                onPressed: () =>
+//                    print('xie state of one ' + raisedButton.enabled.toString())),
           ],
         ),
       ),

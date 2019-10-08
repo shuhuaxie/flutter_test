@@ -9,6 +9,7 @@ import 'package:flutter_app_test/test8.dart';
 
 import 'animation.dart';
 import 'bug_1.dart';
+import 'key_test.dart';
 import 'mycustomview.dart';
 
 void main() => runApp(new LogoApp());
@@ -19,7 +20,7 @@ class LogoApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Color(0xddffffff),
-        body: MyHomePage8(title: "home page"),
+        body: Screen(),
       ),
     );
   }
